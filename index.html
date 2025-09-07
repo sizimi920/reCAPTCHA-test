@@ -1,30 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>私は人間？</title>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reCAPTCHA Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <p class="title">自分はロボットではないかと不安な方へ</p>
-      <p class="subtitle">・下のチェックボックスをクリックして確かめてみましょう。</p>
+    <div class="card">
+        <h1>あなたは人間ですか？</h1>
+
+        <!-- reCAPTCHA本体 -->
+        <div class="g-recaptcha" data-sitekey="6Lc6CLMrAAAAADz0W43HhfzahZV14C3ErwQh2FC-" data-callback="onHumanVerified">
+        </div>
+
+        <div class="greeting" id="greeting">🎉 よかった！人間でした！</div>
     </div>
-  </header>
-  <main>
-    <form action="?" method="POST">
-      <div class="g-recaptcha" data-sitekey="6Lc6CLMrAAAAADz0W43HhfzahZV14C3ErwQh2FC-"></div>
-      <br />
-    </form>
-  </main>
-  <footer>
-      <p class="footer-text">© sizimi920</p>
-  </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
