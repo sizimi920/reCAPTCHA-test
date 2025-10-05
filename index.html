@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>reCAPTCHA Test</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
+  </head>
 
-<body>
-    <div class="card">
-        <h1>あなたは人間ですか？</h1>
-
-        <!-- reCAPTCHA本体 -->
-        <div class="g-recaptcha" data-sitekey="6Lc6CLMrAAAAADz0W43HhfzahZV14C3ErwQh2FC-" data-callback="onHumanVerified">
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="header">
+          <div class="security-icon">🛡️</div>
+          <h1>セキュリティ確認</h1>
+          <p class="subtitle">あなたは人間ですか？</p>
         </div>
 
-        <div class="greeting" id="greeting">🎉 よかった！人間でした！</div>
+        <div class="content">
+          <p class="description">
+            このサイトを保護するため、あなたが人間であることを確認させてください。
+          </p>
+
+          <!-- reCAPTCHA本体 -->
+          <div class="recaptcha-container">
+            <div
+              class="g-recaptcha"
+              data-sitekey="6Lc6CLMrAAAAADz0W43HhfzahZV14C3ErwQh2FC-"
+              data-callback="onHumanVerified"
+            ></div>
+          </div>
+
+          <div class="greeting" id="greeting">
+            <div class="success-icon">✅</div>
+            <h2>認証成功</h2>
+            <p>
+              ありがとうございます！あなたが人間であることが確認できました。
+            </p>
+          </div>
+        </div>
+
+        <div class="footer">
+          <small>このサイトはreCAPTCHAによって保護されています</small>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
